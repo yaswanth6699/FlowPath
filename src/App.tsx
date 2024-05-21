@@ -55,7 +55,7 @@ function App() {
             onEdgesChange={onEdgesChange}
             onConnect={onConnect}
             nodeTypes={nodeTypes}
-            onNodeClick={(e, node) => handleSelectNode(node.id)}
+            onNodeClick={(_, node) => handleSelectNode(node.id)}
             onPaneClick={() => handleSelectNode(null)}
           >
             <MiniMap nodeColor={"teal"} />
