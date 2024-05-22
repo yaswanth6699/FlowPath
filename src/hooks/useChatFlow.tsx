@@ -135,8 +135,8 @@ export const ChatFlowProvider = ({ children }: { children: ReactNode }) => {
 
   const handleAddNode = (payload: { data: string; type: Nodes }) => {
     setNodes((prev) => {
-      const id = Number(prev[prev.length - 1].id) + 1;
-      const ele = prev[prev.length - 1].position;
+      const id = Number(prev[prev.length - 1]?.id || 0) + 1;
+      const ele = prev[prev.length - 1]?.position || { x: 0, y: 0 };
       const position = {
         x: ele.x + 100,
         y: ele.y + 100,
